@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clay Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black font-mono">
+    <nav class="bg-stone-800 p-3">
+        <ul class="flex">
+            <li class="text-white text-2xl m-3"><a href="index.html">Home</a></li>
+            <li class="text-white text-2xl m-3"><a href="track.html">Track</a></li>
+            <li class="text-white text-2xl m-3"><a href="scores.html">Scores</a></li>
+        </ul>
+    </nav>
+    <div id="cesiumContainer" class="w-auto h-250"></div>
+    <div class="flex justify-center">
+        <table class="table-auto border border-collapse border-gray-950 m-5">
+            <thead class="bg-black text-white">
+                <tr>
+                    <th class="border border-gray-500 p-3">Station 1</th>
+                    <th class="border border-gray-500 p-3">Station 2</th>
+                    <th class="border border-gray-500 p-3">Station 3</th>
+                    <th class="border border-gray-500 p-3">Station 4</th>
+                    <th class="border border-gray-500 p-3">Station 5</th>
+                    <th class="border border-gray-500 p-3">Station 6</th>
+                    <th class="border border-gray-500 p-3">Station 7</th>
+                    <th class="border border-gray-500 p-3">Station 8</th>
+                    <th class="border border-gray-500 p-3">Station 9</th>
+                    <th class="border border-gray-500 p-3">Station 10</th>
+                    <th class="border border-gray-500 p-3">Station 11</th>
+                    <th class="border border-gray-500 p-3">Station 12</th>
+                    <th class="border border-gray-500 p-3">Station 13</th>
+                    <th class="border border-gray-500 p-3">Station 14</th>
+                    <th class="border border-gray-500 p-3">Station 15</th>
+                    <th class="border border-gray-500 p-3">Station 16</th>
+                    <th class="border border-gray-500 p-3">Station 17</th>
+                    <th class="border border-gray-500 p-3">Station 18</th>
+                    <th class="border border-gray-500 p-3">Station 19</th>
+                    <th class="border border-gray-500 p-3">Station 20</th>
+                </tr>
+            </thead>
+            <tbody id="results" class="text-white text-center">
+                <tr class="bg-slate-950">
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                </tr>
+                <tr class="bg-slate-950">
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                </tr>
+                <tr class="bg-slate-950">
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                </tr>
+                <tr class="bg-slate-950">
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">0</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                    <td class="border border-gray-500 p-2">1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="module" src="fetchData.ts"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clay Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black font-mono">
+    <nav class="bg-stone-800 p-3">
+        <ul class="flex">
+            <li class="text-white text-2xl m-3"><a href="index.html">Home</a></li>
+            <li class="text-white text-2xl m-3"><a href="track.html">Track</a></li>
+            <li class="text-white text-2xl m-3"><a href="scores.html">Scores</a></li>
+        </ul>
+    </nav>
+    <div class="text-center">
+        <h1 class="text-5xl text-white mt-3">Station #1</h1>
+        <div>
+            <!-- TODO: Add actual buttons -->
+            <button class="text-white text-5xl">&lt</button>
+            <button class="text-white text-5xl">&gt</button>
+        </div>
+    </div>
+    <div class=" flex justify-center">
+        <table id="score" class="table-auto border border-collapse border-gray-950 m-5 text-3xl">
+            <thead class="bg-black text-white">
+                <tr>
+                    <th class="border border-gray-500 p-10">Bird 1</th>
+                    <th class="border border-gray-500 p-10">Bird 2</th>
+                </tr>
+            </thead>
+            <tbody id="results" class="text-white text-center">
+                <tr class="bg-slate-950">
+                    <td class="border border-gray-500 p-10">1</td>
+                    <td class="border border-gray-500 p-10">0</td>
+                </tr>
+                <tr class="bg-slate-950">
+                    <td class="border border-gray-500 p-10">0</td>
+                    <td class="border border-gray-500 p-10">1</td>
+                </tr>
+                <tr class="bg-slate-950">
+                    <td class="border border-gray-500 p-10">0</td>
+                    <td class="border border-gray-500 p-10">0</td>
+                </tr>
+                <tr class="bg-red-950">
+                    <td class="border border-gray-500 p-10">NA</td>
+                    <td class="border border-gray-500 p-10">NA</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <button id="hit" class="bg-green-800 text-black rounded-md p-5 text-4xl">Hit</button>
+        <button id="miss" class="bg-red-800 text-black rounded-md p-5 text-4xl">Miss</button>
+        <button id="back" class="bg-white text-black rounded-md p-5 text-4xl">Back</button>
+    </div>
+    <script src="track.js"></script>
+</body>
+</html>

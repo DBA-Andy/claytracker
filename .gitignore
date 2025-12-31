@@ -1,0 +1,7 @@
+rocksdb/
+*.o
+*.a
+*.so
+example
+node_modules/
+.vite/
